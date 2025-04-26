@@ -1,0 +1,26 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<header class="header">
+<div class="header_wrapper">
+    <div class="logo">
+        <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='logo.png') }}"></a>
+    </div>
+    <div class="nav_bar">
+        <nav>
+            <p><a href="{{ url_for('todo.index') }}">Todo App</a></p>
+            <p><a href="{{ url_for('main.index') }}">Resume</a></p>
+        </nav>
+    </div>
+</header>
+
+<section class="content">
+<header>
+    {% block header %}{% endblock %}
+</header>
+{% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+{% endfor %}
+{% block content %}{% endblock %}
+</section>
