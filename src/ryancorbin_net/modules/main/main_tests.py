@@ -1,7 +1,7 @@
 import unittest
 import json
 
-from app.modules.main.controller import MainController
+from src.ryancorbin_net.modules.main.controller import MainController
 
 
 def test_index():

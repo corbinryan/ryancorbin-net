@@ -1,7 +1,7 @@
 import unittest
 import json
 
-from app.modules.todo.controller import TodoController
+from src.ryancorbin_net.modules.todo.controller import TodoController
 
 
 def test_index():

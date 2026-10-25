@@ -1,8 +1,8 @@
-from app.modules.todo.route import todo_bp
+from .modules.todo.route import todo_bp
 from flask import Flask
 from flasgger import Swagger
-from app.modules.main.route import main_bp
-from app.db.db import db
+from .modules.main.route import main_bp
+from .db.db import db
 
 
 def initialize_route(app: Flask):
